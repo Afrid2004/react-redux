@@ -1,21 +1,30 @@
 import React from 'react'
+import { initialCounter } from '../services/InitialCounter'
+import { decrementNumber, incrementNumber, resetNumber } from '../services/Actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Counter = () => {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
   return (
     <>
       <div className='card mt-3 mb-3 text-center'>
-        <h1>React Redux</h1>
+        <h1 className='d-flex justify-center align-center gap-2'>React Redux <img width="40px" src="/images/redux-favicon.png" alt="redux" /></h1>
       </div>
 
-      <div className="card w-50">
+      <div className="card w-md-50">
         <div  className="badge">
           <p>Counter App</p>
         </div>
         <div>
-          <h1 className='mb-2'>
-            Counter : 0
+          <h1 className='mb-3'>
+              Counter : {count} <small>(limit 5)</small>
           </h1>
-          <button className='btn'>Increment++</button>
+          <div className="d-flex gap-2 align-center flex-wrap">
+            <button className='btn' disabled={count >= 5 ? true : false} onClick={() => {dispatch(incrementNumber())}}>Increment++</button>
+            <button className='btn' disabled={count <= 0 ? true : false} onClick={() => {dispatch(decrementNumber())}}>Decrement--</button>
+            <button className='btn' onClick={() => {dispatch(resetNumber())}}>Reset = 0</button>
+          </div>
         </div>
 
       </div>

@@ -1,0 +1,1 @@
+export const initialCounter = {count : 0}
