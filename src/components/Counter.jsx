@@ -7,7 +7,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="card w-md-50">
+      <div className="card w-100 w-md-50">
         <div  className="badge">
           <p>Counter App</p>
         </div>

@@ -123,11 +123,12 @@ a{
 .w-50{
   width: calc(50% - 1rem);
 }
+
 .w-75{
   width: calc(75% - 1rem);
 }
 .w-100{
-  width: calc(100% - 1rem);
+  width: calc(100%);
 }
 
 /*===========================
@@ -154,12 +155,16 @@ a{
 .w-md-50{
   width: calc(50% - 1rem);
 }
+.w-md-50:last-child{
+  width: calc(50% - 0rem) !important;
+}
 .w-md-75{
   width: calc(75% - 1rem);
 }
 .w-md-100{
   width: calc(100% - 1rem);
 }
+
 }
 
 @media (min-width: 991px) {

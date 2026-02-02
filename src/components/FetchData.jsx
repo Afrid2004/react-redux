@@ -12,7 +12,7 @@ const FetchData = () => {
   }, [])
 
   return (
-          <div className="card w-md-50">
+          <div className="card w-100 w-md-50">
             <div  className="badge">
               <p>Fetch Data</p>
             </div>
