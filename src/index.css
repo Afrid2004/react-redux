@@ -38,11 +38,26 @@ body{
 .mt-3{
   margin-top: 1rem !important;
 }
+.pb-2{
+  padding-bottom: .5rem !important;
+}
+.pb-3{
+  padding-bottom: 1rem;
+}
+.pt-2{
+  padding-top: .5rem !important;
+}
+.pt-3{
+  padding-top: 1rem !important;
+}
 .d-flex{
   display: flex !important;
 }
 .justify-center{
   justify-content: center !important;
+}
+.justify-between{
+  justify-content: space-between !important;
 }
 .align-center{
   align-items: center !important;

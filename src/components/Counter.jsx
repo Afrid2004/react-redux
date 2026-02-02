@@ -1,17 +1,12 @@
 import React from 'react'
-import { initialCounter } from '../services/InitialCounter'
 import { decrementNumber, incrementNumber, resetNumber } from '../services/Actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Counter = () => {
-  const count = useSelector((state) => state.count);
+  const {count} = useSelector((state) => state.Reducer);
   const dispatch = useDispatch();
   return (
     <>
-      <div className='card mt-3 mb-3 text-center'>
-        <h1 className='d-flex justify-center align-center gap-2'>React Redux <img width="40px" src="/images/redux-favicon.png" alt="redux" /></h1>
-      </div>
-
       <div className="card w-md-50">
         <div  className="badge">
           <p>Counter App</p>
