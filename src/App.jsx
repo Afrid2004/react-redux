@@ -4,18 +4,23 @@ import Counter from './components/Counter'
 import { store } from './services/Store'
 import FetchData from './components/FetchData'
 import Header from './layouts/Header'
+import ReduxToolkit from './Toolkit'
+import { RTKStore } from './Toolkit/Store'
 
 function App() {
   return (
-    <Provider store={store}>
       <div className='container'>
         <Header />
         <div className="d-flex gap-2 justify-between flex-wrap">
-          <Counter />
-          <FetchData />
+          <Provider store={store}>
+            <Counter />
+            <FetchData />
+          </Provider>
+          <Provider store={RTKStore}>
+            <ReduxToolkit />
+          </Provider>
         </div>
       </div>
-    </Provider>
   )
 }
 
