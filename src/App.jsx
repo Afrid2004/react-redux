@@ -6,6 +6,7 @@ import FetchData from './components/FetchData'
 import Header from './layouts/Header'
 import ReduxToolkit from './Toolkit'
 import { RTKStore } from './Toolkit/Store'
+import FetchPosts from './Toolkit/FetchPosts'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </Provider>
           <Provider store={RTKStore}>
             <ReduxToolkit />
+            <FetchPosts />
           </Provider>
         </div>
       </div>
